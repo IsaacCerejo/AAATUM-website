@@ -97,7 +97,11 @@
     transition: background 0.2s ease, color 0.2s ease;
 }
 
-.filter-btn:hover,
+.filter-btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+
 .filter-btn.active {
     background-color: var(--color-accent);
     color: var(--color-bg);

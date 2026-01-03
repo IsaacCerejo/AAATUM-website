@@ -43,6 +43,7 @@
 
 .play-button:hover {
     opacity: 0.85;
+    background-color: var(--color-accent-hover);
 }
 
 /* Sections */
