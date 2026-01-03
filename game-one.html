@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game One | AAATUM GAMES</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/game-page.css" />
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<main class="game-page">
+
+    <!-- Hero -->
+    <section class="game-hero">
+        <img src="../assets/game1.png" alt="Game One cover">
+
+        <div class="game-meta">
+            <h1>Game One</h1>
+            <p class="game-tags">Game Jam · Solo · Programming</p>
+
+            <a class="play-button"
+               href="https://yourgame.itch.io/game-one"
+               target="_blank">
+                ▶ Play on itch.io
+            </a>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="game-section">
+        <h2>About the Game</h2>
+        <p>
+            Game One is a short experimental game developed during a 48-hour
+            game jam, focused on fast-paced mechanics and player feedback.
+        </p>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="game-section">
+        <h2>Screenshots</h2>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left" aria-label="Previous screenshot">
+                ‹
+            </button>
+
+            <div class="carousel" id="screenshotCarousel">
+                <img src="../assets/game1.png" alt="Screenshot 1">
+                <img src="../assets/game1.png" alt="Screenshot 2">
+                <img src="../assets/game1.png" alt="Screenshot 3">
+                <img src="../assets/game1.png" alt="Screenshot 4">
+            </div>
+
+            <button class="carousel-btn right" aria-label="Next screenshot">
+                ›
+            </button>
+        </div>
+    </section>
+
+    <!-- Your Role -->
+    <section class="game-section">
+        <h2>My Contribution</h2>
+        <ul>
+            <li>Gameplay programming</li>
+            <li>Game design and mechanics</li>
+            <li>Visual effects and UI</li>
+        </ul>
+    </section>
+
+    <!-- Tech -->
+    <section class="game-section">
+        <h2>Tools & Technologies</h2>
+        <p>Unity · C# · Photoshop</p>
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="../js/include.js"></script>
+
+<script>
+    const carousel = document.getElementById("screenshotCarousel");
+    const scrollAmount = 350;
+
+    document.querySelector(".carousel-btn.left")
+        .addEventListener("click", () => {
+            carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+    document.querySelector(".carousel-btn.right")
+        .addEventListener("click", () => {
+            carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+
+    // Mouse wheel → horizontal scroll
+    carousel.addEventListener("wheel", (e) => {
+        e.preventDefault();
+
+        carousel.scrollBy({
+            left: e.deltaY * 3,
+            behavior: "smooth"
+        });
+    }, { passive: false });
+
+</script>
+
+
+</body>
+</html>

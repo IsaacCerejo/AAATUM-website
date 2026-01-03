@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games | Gamedev Portfolio</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/games.css" />
+
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<main class="intro">
+    <h1>Games</h1>
+    <p>
+        Selected projects since 2023
+    </p>
+</main>
+
+<section class="games-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="jam">Game Jams</button>
+    <button class="filter-btn" data-filter="solo">Solo Projects</button>
+    <button class="filter-btn" data-filter="art">Art</button>
+    <button class="filter-btn" data-filter="programming">Programming</button>
+</section>
+
+
+<main class="games-page">
+    <div class="games-grid">
+
+        <a href="game-one.html" class="game-link">
+            <div class="game-card"
+                data-tags="jam programming"
+                style="background-image: url('assets/game1.png');">
+
+                <div class="game-overlay">
+                    <h3>Game One</h3>
+                    <p>Game Jam · Programming</p>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="game-one.html" class="game-link">
+            <div class="game-card"
+                data-tags="jam programming"
+                style="background-image: url('assets/game1.png');">
+
+                <div class="game-overlay">
+                    <h3>Game One</h3>
+                    <p>Game Jam · Programming</p>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="game-one.html" class="game-link">
+            <div class="game-card"
+                data-tags="jam programming"
+                style="background-image: url('assets/game1.png');">
+
+                <div class="game-overlay">
+                    <h3>Game One</h3>
+                    <p>Game Jam · Programming</p>
+                </div>
+
+            </div>
+        </a>
+
+    </div>
+
+</main>
+
+<div id="footer"></div>
+<script src="js/include.js"></script>
+<script src="js/games-filter.js"></script>
+
+
+</body>
+</html>

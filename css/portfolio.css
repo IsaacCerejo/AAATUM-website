@@ -1,0 +1,71 @@
+/* ===== Portfolio Page ===== */
+.portfolio-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Project Item */
+.portfolio-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+
+/* Text */
+.portfolio-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-info p {
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+}
+
+.portfolio-info ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-info li {
+    margin-bottom: 0.5rem;
+    color: var(--color-muted);
+}
+
+/* Tags */
+.tags {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+}
+
+/* Alternate layout (image right) */
+.portfolio-item:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.portfolio-item:nth-child(even) img {
+    order: 2;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .portfolio-item {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item img {
+        order: 0;
+    }
+}
