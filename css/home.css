@@ -22,11 +22,58 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
-    font-weight: normal;
+
     color: var(--color-muted);
 }
 
 .intro {
     max-width: 600px;
     color: var(--color-muted);
+}
+.top-image {
+    top: 0;
+    width: 100%;
+
+}
+
+.home-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+
+    max-width: 700px;
+    margin: 0 auto 12rem;
+    padding: 0 1.5rem;
+}
+
+.home-card {
+    aspect-ratio: 1 / 1; /* forces square */
+    background-color: var(--color-surface);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--color-text);
+
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition: 
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.home-card:hover {
+    background-color: var(--color-accent);
+    color: white;
+    transform: translateY(-4px);
+}
+
+.home-card span {
+    text-align: center;
+    font-size: 1rem;
 }
