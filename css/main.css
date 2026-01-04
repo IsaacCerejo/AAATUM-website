@@ -6,25 +6,19 @@
 }
 
 :root {
-    /* Core colors */
+
     --color-bg: #e6e4e4;
     --color-surface: #bdbbbb;
     --color-text: #111111;
     --color-muted: #383232;
-
-    /* Accent */
     --color-accent: #0D6C7C;
     --color-accent-hover: #0a5765;
 
-    --navbar-height: 72px;
+    --navbar-height: 65px;
+
+    --font-bold: "League Spartan";
 }
 
-
-h1 {
-    font-weight: 800;
-
-}
-/* Base */
 body {
     padding-top: var(--navbar-height);
     font-family: Arial, Helvetica, sans-serif;
@@ -33,55 +27,8 @@ body {
     color: var(--color-text);
 }
 
-/* ===== Header / Navbar ===== */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: var(--navbar-height);
-    width: 100%;
-
-    background-color: var(--color-surface);
-    z-index: 1000;
-}
 
 
-
-.navbar {
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.logo {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-nav a:hover,
-nav a.active {
-    color: var(--color-accent);
-}
 
 .intro {
     text-align: center;
@@ -89,7 +36,10 @@ nav a.active {
 }
 
 .intro h1 {
-    font-size: 2.5rem;
+    font-family: var(--font-bold);
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -99,47 +49,32 @@ nav a.active {
     color: var(--color-text);
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-text);
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 2000;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-
-    nav {
-        position: fixed;
-        top: var(--navbar-height);
-        right: 0;
-        width: 130px;
-        height: calc(100vh - var(--navbar-height));
-
-        background-color: var(--color-surface);
-
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
-
-    nav.open {
-        transform: translateX(0);
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 1.25rem;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
 }
 
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
 
 

@@ -1,13 +1,15 @@
 <header>
     <div class="navbar">
-        <a href="index.html" class="logo">AAATUM</a>
+        <a href="index.html" class="logo">
+            <img src="assets/aaatum-logo-black.svg" alt="logo">
+        </a>
         <button class="menu-toggle" aria-label="Open menu">☰</button>
         <nav>
             <ul>
                 <li><a href="index.html" data-page="index">Home</a></li>
                 <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
                 <li><a href="games.html" data-page="games">Games</a></li>
-                <li><a href="about.html" data-page="about">About Me</a></li>
+                <li><a href="about.html" data-page="about">About</a></li>
                 <li><a href="contact.html" data-page="contact">Contact</a></li>
 
             </ul>
@@ -16,5 +18,98 @@
     </div>
 </header>
 
+<style>
+    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: var(--navbar-height);
+        width: 100%;
 
+        background-color: var(--color-surface);
+        z-index: 1000;
+    }
+
+    .navbar {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo img {
+        height: 30px;
+        width: auto;
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: var(--color-accent);
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-text);
+    }
+
+    @media (max-width: 768px) {
+
+        nav {
+            position: fixed;
+            top: var(--navbar-height);
+            right: 0;
+            width: 130px;
+            height: calc(100vh - var(--navbar-height));
+
+            background-color: var(--color-surface);
+
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        nav.open {
+            transform: translateX(0);
+        }
+
+        nav ul {
+            flex-direction: column;
+            padding: 1.5rem;
+            gap: 1.25rem;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+    }
+
+</style>
 

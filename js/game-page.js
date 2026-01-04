@@ -1,12 +1,28 @@
+// Get game id from URL
 const params = new URLSearchParams(window.location.search);
 const gameId = params.get("id");
 
+// Get game data
 const game = games[gameId];
 const container = document.getElementById("gamePage");
 
 if (!game) {
     container.innerHTML = "<p>Game not found.</p>";
 } else {
+
+    // Build screenshots section
+    const screenshotsHTML = game.screenshots
+        .map(
+            (shot) => `
+                <figure class="screenshot-item">
+                    <img src="${shot.image}" alt="${game.title} screenshot">
+                    <figcaption>${shot.caption}</figcaption>
+                </figure>
+            `
+        )
+        .join("");
+
+    // Inject page HTML
     container.innerHTML = `
         <section class="game-hero">
             <img src="${game.cover}" alt="${game.title} cover">
@@ -36,5 +52,37 @@ if (!game) {
             <h2>Tools & Technologies</h2>
             <p>${game.tools.join(" · ")}</p>
         </section>
+
+        <section class="game-section screenshots">
+            <h2>Screenshots</h2>
+            ${screenshotsHTML}
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <img id="lightbox-img" alt="">
+        </div>
+
     `;
 }
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".screenshot-item img")) {
+        lightboxImg.src = e.target.src;
+        lightbox.classList.add("open");
+    }
+
+    if (e.target === lightbox) {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+    }
+});
