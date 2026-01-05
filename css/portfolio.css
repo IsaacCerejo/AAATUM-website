@@ -69,3 +69,18 @@
         order: 0;
     }
 }
+
+.project-gallery img {
+    cursor: zoom-in;
+}
+
+.project-gallery img.fullscreen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: rgba(0,0,0,0.9);
+    z-index: 999;
+    cursor: zoom-out;
+}

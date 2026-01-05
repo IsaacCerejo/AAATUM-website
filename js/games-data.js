@@ -1,5 +1,6 @@
 const games = {
     "sally": {
+        portfolio: true,
         title: "Sally's Magic Pen",
         cover: "assets/sally-cover.png",
         tags: ["jam", "solo", "programming"],
@@ -24,6 +25,7 @@ const games = {
     },
 
     "game-two": {
+        portfolio: false,
         title: "Game Two",
         cover: "assets/game2.png",
         tags: ["team", "art", "programming"],
