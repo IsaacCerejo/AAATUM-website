@@ -4,7 +4,7 @@ const games = {
         title: "Sally's Magic Pen",
         cover: "assets/games/sally/cover.png",
         tags: ["jam", "programming"],
-        itch: "https://yourgame.itch.io/game-one",
+        itch: "https://aaatum-games.itch.io/sallys-magic-pen",
         description: "Short experimental game made in 48 hours.",
         contribution: ["Gameplay programming", "Game design","UI & VFX"],
         tools: ["Unity", "C#", "Photoshop"],

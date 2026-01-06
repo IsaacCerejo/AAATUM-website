@@ -46,7 +46,7 @@ body {
 
 .intro {
     text-align: center;
-    margin-bottom: 4rem;
+    margin: 2rem;
 }
 
 .intro h1 {
@@ -58,7 +58,7 @@ body {
 }
 
 .intro p {
-    max-width: 650px;
+    max-width: 850px;
     margin: 0 auto;
     color: var(--color-6);
 }
