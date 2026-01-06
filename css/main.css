@@ -7,24 +7,38 @@
 
 :root {
 
-    --color-bg: #e6e4e4;
-    --color-surface: #bdbbbb;
-    --color-text: #111111;
-    --color-muted: #383232;
+    --color-1: #bebebe;
+    --color-2: #aeaeae;
+    --color-3: #8a8a8a;
+    --color-4: #686868;
+    --color-5: #3b3b3b;
+    --color-6: #292929;
+
+
     --color-accent: #0D6C7C;
-    --color-accent-hover: #0a5765;
+    --color-5-hover: #0a5765;
 
     --navbar-height: 65px;
 
     --font-bold: "League Spartan";
 }
 
+html[data-palette="alt"] {
+    --color-1: #292929;
+    --color-2: #3b3b3b;
+    --color-3: #686868;
+    --color-4: #8a8a8a;
+    --color-5: #aeaeae;
+    --color-6: #bebebe;
+}
+
+
 body {
     padding-top: var(--navbar-height);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--color-1);
+    color: var(--color-6);
 }
 
 
@@ -46,7 +60,7 @@ body {
 .intro p {
     max-width: 650px;
     margin: 0 auto;
-    color: var(--color-text);
+    color: var(--color-6);
 }
 
 
@@ -71,7 +85,6 @@ body {
     object-fit: contain;
     cursor: zoom-out;
 }
-
 
 
 

@@ -14,7 +14,7 @@
     font-family: var(--font-bold);
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--color-3);
     padding-bottom: 0.5rem;
 }
 
@@ -30,19 +30,19 @@
 
 .entry-meta {
     font-size: 0.85rem;
-    color: #666;
+    color: var(--color-5);
     margin-left: 1.2rem;
 }
 
 .entry-date {
     font-size: 0.75rem;
-    color: #999;
+    color: var(--color-3);
     margin-top: 0.15rem;
     margin-left: 1.2rem;
 }
 
 .entry-desc {
-    color: #333;
+    color: var(--color-6);
     font-size: 0.85rem;
     margin-top: 0.6rem;
     max-width: 700px;
@@ -57,7 +57,7 @@
 
 .entry-list li {
     font-size: 0.85rem;
-    color: #777;
+    color: var(--color-4);
 }
 
 
@@ -70,7 +70,7 @@
 }
 
 .skills-list li {
-    background-color: var(--color-surface);
+    background-color: var(--color-2);
     padding: 0.6rem 0.8rem;
     border-radius: 8px;
     font-size: 0.9rem;

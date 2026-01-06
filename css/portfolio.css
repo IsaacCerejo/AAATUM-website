@@ -33,7 +33,7 @@
 }
 
 .portfolio-info p {
-    color: var(--color-muted);
+    color: var(--color-2);
     margin-bottom: 1rem;
 }
 
@@ -44,13 +44,13 @@
 
 .portfolio-info li {
     margin-bottom: 0.5rem;
-    color: var(--color-muted);
+    color: var(--color-2);
 }
 
 /* Tags */
 .tags {
     font-size: 0.8rem;
-    color: var(--color-accent);
+    color: var(--color-5);
 }
 
 /* Alternate layout (image right) */
@@ -87,7 +87,7 @@
 .project-gallery figcaption {
     margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: var(--color-muted);
+    color: var(--color-2);
 }
 
 /* Mobile */

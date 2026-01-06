@@ -27,7 +27,7 @@
 }
 
 .game-tags {
-    color: var(--color-accent);
+    color: var(--color-5);
     margin-bottom: 1.5rem;
 }
 
@@ -35,8 +35,8 @@
 .play-button {
     display: inline-block;
     padding: 0.7rem 1.4rem;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
+    background-color: var(--color-5);
+    color: var(--color-1);
     font-weight: bold;
     border-radius: 999px;
     text-decoration: none;
@@ -44,7 +44,7 @@
 
 .play-button:hover {
     opacity: 0.85;
-    background-color: var(--color-accent-hover);
+    background-color: var(--color-5-hover);
 }
 
 /* Sections */
@@ -54,7 +54,7 @@
 
 .game-section h2 {
     margin-bottom: 0.8rem;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--color-3);
     padding-bottom: 0.4rem;
 }
 
@@ -79,7 +79,7 @@
 .screenshot-item figcaption {
     margin-top: 0.75rem;
     font-size: 0.9rem;
-    color: var(--color-muted);
+    color: var(--color-2);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;

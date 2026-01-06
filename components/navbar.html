@@ -12,11 +12,14 @@
                 <li><a href="games.html" data-page="games">Games</a></li>
                 <li><a href="about.html" data-page="about">About</a></li>
                 <li><a href="contact.html" data-page="contact">Contact</a></li>
+                <li><button class="palette-toggle" aria-label="Change color palette">◐</button></li>
 
             </ul>
         </nav>
         
     </div>
+    
+
 </header>
 
 <style>
@@ -28,7 +31,7 @@
         height: var(--navbar-height);
         width: 100%;
 
-        background-color: var(--color-surface);
+        background-color: var(--color-2);
         z-index: 1000;
     }
 
@@ -62,14 +65,14 @@
     }
 
     nav a {
-        color: var(--color-text);
+        color: var(--color-6);
         text-decoration: none;
         transition: color 0.2s ease;
     }
 
     nav a:hover,
     nav a.active {
-        color: var(--color-accent);
+        color: var(--color-4);
     }
 
     .menu-toggle {
@@ -78,8 +81,25 @@
         background: none;
         border: none;
         cursor: pointer;
-        color: var(--color-text);
+        color: var(--color-6);
     }
+
+    
+.palette-toggle {
+    background: none;
+    border: none;
+    color: var(--color-6);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+
+
+}
+
+.palette-toggle:hover {
+    color: var(--color-4);
+}
+
 
     @media (max-width: 768px) {
 
@@ -90,7 +110,7 @@
             width: 130px;
             height: calc(100vh - var(--navbar-height));
 
-            background-color: var(--color-surface);
+            background-color: var(--color-2);
 
             transform: translateX(100%);
             transition: transform 0.3s ease;

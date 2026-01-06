@@ -8,6 +8,7 @@ function loadComponent(id, file) {
             container.innerHTML = html;
             if (id === "navbar") {
                 initNavbar();
+                setupPaletteToggle();
             }
         })
         .catch(err => console.error(`Error loading ${file}`, err));
@@ -33,10 +34,38 @@ function initNavbar() {
     });
 }
 
+function setupPaletteToggle() {
+    const toggleBtn = document.querySelector(".palette-toggle");
+    if (!toggleBtn) return;
+
+    toggleBtn.addEventListener("click", () => {
+        const html = document.documentElement;
+        const current = html.getAttribute("data-palette");
+
+        const next = current === "default" ? "alt" : "default";
+        html.setAttribute("data-palette", next);
+
+        // ✅ Save palette
+        localStorage.setItem("palette", next);
+    });
+}
+
+
+function initPalette() {
+    const html = document.documentElement;
+    const savedPalette = localStorage.getItem("palette") || "default";
+    html.setAttribute("data-palette", savedPalette);
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    initPalette();
     loadHead("components/head.html");
     loadComponent("navbar", "components/navbar.html");
     loadComponent("footer", "components/footer.html");
+
 });
 
 
