@@ -54,27 +54,24 @@ body {
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
+    background: rgba(0,0,0,0.9);
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-    z-index: 2000;
+    z-index: 9999;
 }
 
 .lightbox.open {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
 }
 
 .lightbox img {
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
-    border-radius: 8px;
+    cursor: zoom-out;
 }
+
 
 
 

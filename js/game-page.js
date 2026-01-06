@@ -15,7 +15,7 @@ if (!game) {
         .map(
             (shot) => `
                 <figure class="screenshot-item">
-                    <img src="${shot.image}" alt="${game.title} screenshot">
+                    <img src="${shot.image}" alt="${game.title} screenshot" data-lightbox>
                     <figcaption>${shot.caption}</figcaption>
                 </figure>
             `
@@ -61,28 +61,8 @@ if (!game) {
         <div id="lightbox" class="lightbox">
             <img id="lightbox-img" alt="">
         </div>
+        
 
     `;
 }
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-document.addEventListener("click", (e) => {
-    if (e.target.matches(".screenshot-item img")) {
-        lightboxImg.src = e.target.src;
-        lightbox.classList.add("open");
-    }
-
-    if (e.target === lightbox) {
-        lightbox.classList.remove("open");
-        lightboxImg.src = "";
-    }
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        lightbox.classList.remove("open");
-        lightboxImg.src = "";
-    }
-});
